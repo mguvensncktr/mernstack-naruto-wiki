@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
-import HomeScreen from './src/screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigation from './src/Navigation/StackNavigation';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -15,9 +16,9 @@ export default function App() {
   }
 
   return (
-    <>
+    <NavigationContainer>
+      <StackNavigation />
       <StatusBar style="light" />
-      <HomeScreen />
-    </>
+    </NavigationContainer>
   );
 }
