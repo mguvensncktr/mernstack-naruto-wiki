@@ -157,7 +157,7 @@ const ClanDetailScreen = () => {
             >
               Jutsu
             </Text>
-            <View>
+            <View style={{ flex: 1 }}>
               {clan?.clanJutsuList.map((jutsu, index) => {
                 return (
                   <Text
@@ -166,6 +166,7 @@ const ClanDetailScreen = () => {
                       color: svgTextColor,
                       ...FONTS.body3,
                       marginTop: 5,
+                      textAlign: "right",
                     }}
                   >
                     {jutsu}
@@ -191,31 +192,26 @@ const ClanDetailScreen = () => {
       {renderImageAndName()}
       {renderInfo()}
       {showModal && (
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={showModal}
-          onRequestClose={() => setShowModal(!showModal)}
-        >
+        <Modal animationType="slide" transparent={true} visible={showModal}>
           <ScrollView
             style={{
               backgroundColor: "rgba(0,0,0,0.5)",
               borderTopLeftRadius: 30,
               borderTopRightRadius: 30,
+              paddingTop: SIZES.radius + SIZES.padding2,
             }}
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{
               justifyContent: "center",
               alignItems: "center",
-              flex: 1,
             }}
           >
             <TouchableOpacity
               onPress={() => setShowModal(!showModal)}
               style={{
                 position: "absolute",
-                top: 10,
-                right: 15,
+                top: 25,
+                right: 20,
               }}
             >
               <Text style={{ color: COLORS.white, ...FONTS.body2 }}>Close</Text>

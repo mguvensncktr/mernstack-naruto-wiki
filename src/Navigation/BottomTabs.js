@@ -8,7 +8,7 @@ import { StackNavigator, ClanStackNavigator, DojutsuStackNavigator } from './Sta
 import HomeScreen from '../screens/HomeScreen';
 
 // constants
-import { COLORS, FONTS } from '../constants';
+import { COLORS } from '../constants';
 
 const Tabs = createBottomTabNavigator();
 
