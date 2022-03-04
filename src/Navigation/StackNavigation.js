@@ -4,6 +4,8 @@ import CharactersScreen from "../screens/CharactersScreen";
 import DetailScreen from '../screens/DetailScreen';
 import ClansScreen from "../screens/ClansScreen";
 import ClanDetailScreen from "../screens/ClanDetailScreen";
+import DojutsuScreen from "../screens/DojutsuScreen";
+import DojutsuDetailScreen from "../screens/DojutsuDetailScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,4 +27,13 @@ const ClanStackNavigator = () => {
     );
 }
 
-export { StackNavigator, ClanStackNavigator };
+const DojutsuStackNavigator = () => {
+    return (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Dojutsu" component={DojutsuScreen} />
+            <Stack.Screen name="DojutsuDetails" component={DojutsuDetailScreen} />
+        </Stack.Navigator>
+    );
+}
+
+export { StackNavigator, ClanStackNavigator, DojutsuStackNavigator };

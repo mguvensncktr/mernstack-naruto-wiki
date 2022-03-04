@@ -12,7 +12,6 @@ import { AntDesign } from "@expo/vector-icons";
 import { COLORS, SIZES, FONTS } from "../constants";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { SvgUri } from "react-native-svg";
-import CharacterCard from "../components/CharacterCard";
 
 const ClanDetailScreen = () => {
   const navigation = useNavigation();
