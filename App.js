@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
-import StackNavigation from './src/Navigation/StackNavigation';
+import { ClanStackNavigator, StackNavigator } from './src/Navigation/StackNavigation';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <StackNavigation />
+      <ClanStackNavigator />
       <StatusBar style="light" />
     </NavigationContainer>
   );

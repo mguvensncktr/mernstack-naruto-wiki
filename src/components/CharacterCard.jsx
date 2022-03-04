@@ -21,7 +21,14 @@ const CharacterCard = ({ character }) => {
         }}
       >
         <Image
-          source={{ uri: character?.image }}
+          // if character has no image, use default image from web
+          source={
+            character.image
+              ? { uri: character?.image }
+              : {
+                  uri: "https://vignette.wikia.nocookie.net/naruto/images/b/b4/Naruto_Uzumaki_%28Anime%29.png/revision/latest?cb=20160506024051",
+                }
+          }
           style={{
             marginTop: 10,
             borderRadius: SIZES.radius,
