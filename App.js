@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
-import { ClanStackNavigator, StackNavigator, DojutsuStackNavigator } from './src/Navigation/StackNavigation';
+import TabNavigator from './src/Navigation/BottomTabs';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <DojutsuStackNavigator />
+      <TabNavigator />
       <StatusBar style="light" />
     </NavigationContainer>
   );
