@@ -8,7 +8,7 @@ Naruto Wiki App
 - **Express** and **NodeJS** for building the api
 - **React Native Expo** for the front-end
 - **API**: https://mern-api-nrt.herokuapp.com/ (endpoints on my api's repo)
-- **Cheerio** js lib for web-scraping
+- **Cheerio** js lib for web-scraping (the scraper is on my repo's)
 
 ### Screenshots:
 
